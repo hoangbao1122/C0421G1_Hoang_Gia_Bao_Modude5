@@ -1,0 +1,13 @@
+<p>caculator works!</p>
+
+number 1 <input type="text" [(ngModel)]="number1">
+number 2 <input type="text" [(ngModel)]="number2"><br/><br>
+<input type="button" value="+" #operator >
+<input type="button" value="-" >
+<input type="button" value="*">
+<input type="button" value="/">
+<br/>
+<input type="button" value="Tinh" (click)="result(this.number1,this.number2,operator.value)">
+<p>{{results}}</p>
+<br/>
+
