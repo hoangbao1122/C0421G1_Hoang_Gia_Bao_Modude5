@@ -1,0 +1,51 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Stt</th>
+      <th scope="col">id Customer</th>
+      <th scope="col">name type</th>
+      <th scope="col">name</th>
+      <th scope="col">birthday</th>
+      <th scope="col">cmnd</th>
+      <th scope="col">phone</th>
+      <th scope="col">email</th>
+      <th scope="col">address</th>
+      <th colspan="2">action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customers of customer;let i = index;" (click)="showFormEdit(customers)">
+      <th scope="row">{{i + 1 }}</th>
+      <td>{{customers.id}}</td>
+
+      <td [ngSwitch]="customers.idTypeCustomer">
+        <span *ngSwitchCase="1">Vip</span>
+        <span *ngSwitchCase="2">Dc</span>
+        <span *ngSwitchDefault>Non</span>
+      </td>
+
+
+      <td>{{customers.name}}</td>
+      <td>{{customers.birthday}}</td>
+      <td>{{customers.CMND}}</td>
+      <td>{{customers.phoneNumber}}</td>
+      <td>{{customers.email}}</td>
+      <td>{{customers.address}}</td>
+      <td>
+        <button (click)="deleteCustomer(customers.id)" class="btn btn-danger">delete</button>
+
+
+
+      </td>
+      <td>
+        <button class="btn btn-warning">Edit</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <app-cus-create (customerCreate)="newCustomer($event)"></app-cus-create>
+  <app-cus-edit [customer]="customerEdit"></app-cus-edit>
+  <app-cus-edit (customer-edit)="editCustomer($event)"></app-cus-edit>
+</div>
+

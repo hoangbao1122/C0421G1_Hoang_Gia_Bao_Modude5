@@ -1,0 +1,42 @@
+
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Stt</th>
+      <th scope="col">id Employee</th>
+      <th scope="col">name</th>
+      <th scope="col">position</th>
+      <th scope="col">education</th>
+      <th scope="col">division</th>
+      <th scope="col">bỉthday</th>
+      <th scope="col">CMnd</th>
+      <th scope="col">money</th>
+      <th colspan="2">phone</th>
+      <th scope="col">email</th>
+      <th scope="col">address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employees of employee;let i = index">
+      <th scope="row">{{i + 1 }}</th>
+      <td>{{employees.idEmployee}}</td>
+
+      <td>{{employees.name}}</td>
+      <td>{{employees.position}}</td>
+      <td>{{employees.education}}</td>
+      <td>{{employees.division}}</td>
+      <td>{{employees.birthday}}</td>
+      <td>{{employees.CMND}}</td>
+      <td>{{employees.money}}</td>
+      <td>{{employees.phone}}</td>
+      <td>{{employees.email}}</td>
+      <td>{{employees.address}}</td>
+      <td><button class="btn btn-danger">delete</button></td>
+      <td><button class="btn btn-warning">Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+

@@ -1,0 +1,42 @@
+<div *ngIf="customerEdit">
+  <div class="container showCreate">
+      <div class="mb-3">
+        <label for="idCus" class="form-label">Id Customer</label>
+        <input type="hidden" class="form-control" id="idCus" #id [value]="customerEdit.id">
+      </div>
+      <div class="mb-3">
+        <label for="type" class="form-label">Name type</label>
+        <input type="text" class="form-control" id="type" #typeId [value]="customerEdit.id">
+
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" #name [value]="customerEdit.name">
+      </div>
+      <div class="mb-3">
+        <label for="birthday" class="form-label">birthday</label>
+        <input type="text" class="form-control" id="birthday" #birthday [value]="customerEdit.birthday">
+      </div>
+      <div class="mb-3">
+        <label for="cmnd" class="form-label">CmNd</label>
+        <input type="text" class="form-control" id="cmnd" #cmnd value="{{customerEdit.CMND}}">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" #phone value="{{customerEdit.phoneNumber}}">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" #email value="{{customerEdit.email}}">
+      </div>
+      <div class="mb-3">
+        <label for="idCus" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" #address value="{{customerEdit.address}}">
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+              (click)="editCustomer(id.value,typeId.value,name.value,birthday.value,cmnd.value,phone.value,email.value,address.value)">Submit</button>
+
+  </div>
+
+</div>

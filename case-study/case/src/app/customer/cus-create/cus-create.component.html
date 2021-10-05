@@ -1,0 +1,44 @@
+
+<div class="container showCreate">
+  <form *ngIf="showFormCreate">
+    <div class="mb-3">
+      <label for="idCus" class="form-label">Id Customer</label>
+      <input type="email" class="form-control" id="idCus" #id>
+    </div>
+    <div class="mb-3">
+      <label for="type" class="form-label">Name type</label>
+      <input type="email" class="form-control" id="type" #typeId>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="email" class="form-control" id="name" #name>
+    </div>
+    <div class="mb-3">
+      <label for="birthday" class="form-label">birthday</label>
+      <input type="email" class="form-control" id="birthday" #birthday>
+    </div>
+    <div class="mb-3">
+      <label for="cmnd" class="form-label">CmNd</label>
+      <input type="email" class="form-control" id="cmnd" #cmnd>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="email" class="form-control" id="phone" #phone>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" #email>
+    </div>
+    <div class="mb-3">
+      <label for="idCus" class="form-label">Address</label>
+      <input type="email" class="form-control" id="address" #address>
+    </div>
+
+    <button type="submit" class="btn btn-primary"
+            (click)="createCustomer(id.value,typeId.value,name.value,birthday.value,cmnd.value,phone.value,email.value,address.value)">Submit</button>
+
+
+
+  </form>
+  <button type="submit" class="btn btn-success" (click)="showFormCreate = true" *ngIf="!showFormCreate">Add</button>
+</div>
