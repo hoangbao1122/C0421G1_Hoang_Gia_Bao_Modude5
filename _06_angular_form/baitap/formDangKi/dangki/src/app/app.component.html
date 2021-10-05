@@ -1,0 +1,20 @@
+
+<table border="1px">
+  <tr>
+    <th>email</th>
+    <th>country</th>
+    <th>age</th>
+    <th>gender</th>
+    <th>phone</th>
+    <th>password</th>
+  </tr>
+  <tr *ngFor="let obj of user">
+    <th>{{obj.email}}</th>
+    <th>{{obj.country}}</th>
+    <th>{{obj.age}}</th>
+    <th>{{obj.gender}}</th>
+    <th>{{obj.phone}}</th>
+    <th>{{obj.password}}</th>
+  </tr>
+</table>
+<app-form (user)="newUser($event)"></app-form>
