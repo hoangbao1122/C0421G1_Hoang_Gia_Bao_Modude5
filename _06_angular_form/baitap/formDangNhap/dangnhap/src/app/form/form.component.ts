@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
 
   login() {
     console.log(this.userLogin.value);
-    if (!this.userLogin.valid){
+    if (this.userLogin.valid){
       alert("ok login thanh cong")
     }
   }
